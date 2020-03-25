@@ -1,13 +1,27 @@
+<svelte:head>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</svelte:head>
+
 <script>
-	export let name;
+import Introduction from './Introduction.svelte'
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<div class="row">
+		<div class="col-sm-0 col-md-3"></div>
+		<div class="col-sm-4 col-md-6"><Introduction /></div>
+		<div class="col-sm-0 col-md-3"></div>
+	</div>
+
 </main>
 
 <style>
+	:global(body){
+		background: rgb(20,20,20) !important;
+		color: white !important;
+		padding-top: 20%;
+	}
+
 	main {
 		text-align: center;
 		padding: 1em;
